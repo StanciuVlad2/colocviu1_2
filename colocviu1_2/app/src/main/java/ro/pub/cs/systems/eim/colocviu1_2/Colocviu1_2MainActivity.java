@@ -44,6 +44,10 @@ public class Colocviu1_2MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Colocviu1_2MainActivity.this,Colocviu1_2SecondaryActivity.class);
                 intent.putExtra("EXTRA_SUMS", textView.getText().toString());
                 startActivityForResult(intent,0);
+                Intent intent1 = new Intent(Colocviu1_2MainActivity.this,Colocviu1_2Service.class);
+                if (Integer.parseInt(textView.getText().toString()) > 10){
+                    startService(intent1);
+                }
 
 
 
